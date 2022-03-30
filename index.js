@@ -46,17 +46,19 @@ const fetchUser = async () => {
                       <div class="comments">85 comments</div>
                     </div>
                     <div class="LCS d-flex justify-content-between pt-2">
-                    <div><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>0</div>
+                    <div id="numbersOfThumbsup"><i class="fa fa-thumbs-o-up" id="thumbsUp1" aria-hidden="true"></i>0</div>
                     <div><i class="fa fa-comment-o" aria-hidden="true"></i>Comments</div>
                     <div><i class="fa fa-share" aria-hidden="true"></i>Share</div>
                   </div>
                 </div>
             </div>
         `;
+       
         randDiv.innerHTML = template;
         peopleElem.appendChild(randDiv);    
     }
 
+    
 
 
 }
@@ -125,7 +127,20 @@ fetchUser();
 
 
 
+// let numbersOfThumbsup = document.getElementById("numbersOfThumbsup")
+// console.log(numbersOfThumbsup);
+// numbersOfThumbsup.textContent=0;
 
+
+
+// document.querySelector("#thumbsUp1").addEventListener("click", function(e){
+// if (numbersOfThumbsup.textContent == '0') {
+// numbersOfThumbsup.textContent++   
+// } else {
+// numbersOfThumbsup.textContent = 0  
+
+// }
+// })
 
 
 

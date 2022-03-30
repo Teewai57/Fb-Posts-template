@@ -27,7 +27,7 @@ let peopleElem = document.getElementById('people');
 
 const fetchUser = async () => {
     // const res = await axios.get('https://randomuser.me/api/')
-    const res = await axios.get('https://randomuser.me/api/?results=5')
+    const res = await axios.get('https://randomuser.me/api/?results=100')
     
     console.log(res)
     for (let i = 0; i < res.data.results.length; i++) {
@@ -39,7 +39,7 @@ const fetchUser = async () => {
                     <img class="card-img-top profilePic" src="${profile.picture.medium}">
                 </div>
                 <div class="card-body">
-                    <h4 class="card-title name">${profile.name.title}, ${profile.name.first} ${profile.name.last}</h4>
+                    <h4 class="card-title name">${profile.name.title} ${profile.name.first} ${profile.name.last}</h4>
                     <h6 class="card-title name">${profile.gender}</h6>
                 </div>
             </div>

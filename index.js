@@ -38,9 +38,18 @@ const fetchUser = async () => {
                 <div>
                     <img class="card-img-top profilePic" src="${profile.picture.medium}">
                 </div>
-                <div class="card-body">
+                <div class="card-body bg-light">
                     <h4 class="card-title name">${profile.name.title} ${profile.name.first} ${profile.name.last}</h4>
                     <h6 class="card-title name">${profile.gender}</h6>
+                    <div class="likesncomments d-flex justify-content-between mt-3">
+                      <div class="likes"><i class="fa fa-thumbs-up text-primary " aria-hidden="true"></i> <i class="fa fa-heart text-danger m" aria-hidden="true"></i> 105</div>
+                      <div class="comments">85 comments</div>
+                    </div>
+                    <div class="LCS d-flex justify-content-between pt-2">
+                    <div><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>0</div>
+                    <div><i class="fa fa-comment-o" aria-hidden="true"></i>Comments</div>
+                    <div><i class="fa fa-share" aria-hidden="true"></i>Share</div>
+                  </div>
                 </div>
             </div>
         `;

@@ -34,7 +34,7 @@ const fetchUser = async () => {
         let profile = res.data.results[i]
         let randDiv = document.createElement('span');
         let template = `
-            <div class="card mt-4 mx-4">
+            <div class="card mt-4 mx-4 shadow">
                 <div>
                     <img class="card-img-top profilePic" src="${profile.picture.medium}">
                 </div>

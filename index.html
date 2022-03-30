@@ -10,13 +10,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter:wght@500&family=Open+Sans:wght@500&display=swap"
+    rel="stylesheet">
+
   </head>
   <body>
       
     <div class="container">
         <div class="row justify-content-center ">
             <div id="people" class="d-flex flex-wrap">
-
+              <div class="card mt-4 mx-4">
+                <div>
+                    <img class="card-img-top profilePic" src="${profile.picture.medium}">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title name">${profile.name.title} ${profile.name.first} ${profile.name.last}</h4>
+                    <h6 class="card-title name">${profile.gender}</h6>
+                   <div class="others">
+                    <div class="likesncomments d-flex justify-content-between">
+                      <div class="likes"><i class="fa fa-thumbs-up text-primary " aria-hidden="true"></i> <i class="fa fa-heart text-danger m" aria-hidden="true"></i> 105</div>
+                      <div class="comments">85 comments</div>
+                    </div>
+                   </div>
+                    
+                </div>
+            </div>
             </div>
 
 

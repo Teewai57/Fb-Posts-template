@@ -27,7 +27,7 @@ let peopleElem = document.getElementById('people');
 
 const fetchUser = async () => {
     // const res = await axios.get('https://randomuser.me/api/')
-    const res = await axios.get('https://randomuser.me/api/?results=100')
+    const res = await axios.get('https://randomuser.me/api/?results=10  ')
     
     console.log(res)
     for (let i = 0; i < res.data.results.length; i++) {

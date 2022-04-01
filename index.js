@@ -1,27 +1,4 @@
-// fetch api
 
-
-
-// async function getProfile() {
-//     let profilePicture = document.getElementsByClassName('profilePic');
-//     let profileName = document.querySelector('.name')   
-//     console.log(profilePicture[0]);
-//     const res = await axios.get('https://randomuser.me/api/')
-//     const data = res.data.results[0];
-//     console.log( data);
-//     // localStorage.setItem('post', JSON.stringify(data))
-//     // getData = JSON.parse(localStorage.getItem('post'))
-//     console.log(getData);
-//     profilePicture[0].setAttribute('src', `${getData.picture.medium}`);
-//     profileName.textContent = `${data.name.first} ${data.name.last}`
-//     console.log(profileName);
-
-//     return data 
-
-// }
-
-// console.log(profileName);
-// getProfile();
 
 let peopleElem = document.getElementById('people');
 

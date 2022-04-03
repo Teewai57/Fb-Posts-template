@@ -23,7 +23,7 @@ const fetchUser = async () => {
                       <div class="comments">85 comments</div>
                     </div>
                     <div class="LCS d-flex justify-content-between pt-2">
-                    <div id="numbersOfThumbsup"><i class="fa fa-thumbs-o-up" id="thumbsUp1" aria-hidden="true"></i>0</div>
+                    <div id="numbersOfThumbsup"><i class="fa fa-thumbs-o-up" id="thumbsUp1" aria-hidden="true"></i></div>
                     <div><i class="fa fa-comment-o" aria-hidden="true"></i>Comments</div>
                     <div><i class="fa fa-share" aria-hidden="true"></i>Share</div>
                   </div>
@@ -34,6 +34,14 @@ const fetchUser = async () => {
         randDiv.innerHTML = template;
         peopleElem.appendChild(randDiv);    
     }
+    let icon = document.querySelector('#thumbsUp1')
+    // document.addEventListener('on click')
+    icon.onclick = function (e) {
+        if (e.target.classList.contains("fa-thumbs-up")) {
+          e.target.classList.toggle("text-danger");
+        }
+       
+      };
 
     
 

@@ -4,14 +4,15 @@ let peopleElem = document.getElementById('people');
 
 const fetchUser = async () => {
     // const res = await axios.get('https://randomuser.me/api/')
-    const res = await axios.get('https://randomuser.me/api/?results=10  ');
-    const comments = await axios.get('https://jsonplaceholder.typicode.com/comments?postId=1');
-    console.log(comments);
+    const res = await axios.get('https://randomuser.me/api/?results=10',);
+    // const comments = await axios.get('https://jsonplaceholder.typicode.com/comments?postId=1');
+    // console.log(comments);
     
     console.log(res)
     for (let i = 0; i < res.data.results.length; i++) {
         let profile = res.data.results[i]
         let randDiv = document.createElement('span');
+        // let ranComments = comments.data.name;
         let template = `
             <div class="card mt-4 mx-4 shadow">
                 <div>
@@ -30,7 +31,7 @@ const fetchUser = async () => {
                     <div><i class="fa fa-share" aria-hidden="true"></i>Share</div>
                     </div>
                     <div class="comments"> 
-                    <p></p>
+                    <p>$</p>
                     <p></p>
                     <p></p>
                     </div>
@@ -45,6 +46,14 @@ const fetchUser = async () => {
 
 
 }
+
+// data: Array(5)
+// 0: {postId: 1, id: 1, name: 'id labore ex et quam laborum', email: 'Eliseo@gardner.biz', body: 'laudantium enim quasi est quidem magnam voluptate …utem quasi\nreiciendis et nam sapiente accusantium'}
+// 1: {postId: 1, id: 2, name: 'quo vero reiciendis velit similique earum', email: 'Jayne_Kuhic@sydney.com', body: 'est natus enim nihil est dolore omnis voluptatem n…iatur\nnihil sint nostrum voluptatem reiciendis et'}
+// 2: {postId: 1, id: 3, name: 'odio adipisci rerum aut animi', email: 'Nikita@garfield.biz', body: 'quia molestiae reprehenderit quasi aspernatur\naut …mus et vero voluptates excepturi deleniti ratione'}
+// 3: {postId: 1, id: 4, name: 'alias odio sit', email: 'Lew@alysha.tv', body: 'non et atque\noccaecati deserunt quas accusantium u…r itaque dolor\net qui rerum deleniti ut occaecati'}
+// 4: {postId: 1, id: 5, name: 'vero eaque aliquid doloribus et culpa', email: 'Hayden@althea.biz', body: 'harum non quasi et ratione\ntempore iure ex volupta…ugit inventore cupiditate\nvoluptates magni quo et'}
+// length: 5
 
 // cell: "06-77-62-31-45"
 // dob: {date: '1996-10-13T02:28:15.573Z', age: 26}

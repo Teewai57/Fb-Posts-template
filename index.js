@@ -4,7 +4,9 @@ let peopleElem = document.getElementById('people');
 
 const fetchUser = async () => {
     // const res = await axios.get('https://randomuser.me/api/')
-    const res = await axios.get('https://randomuser.me/api/?results=10  ')
+    const res = await axios.get('https://randomuser.me/api/?results=10  ');
+    const comments = await axios.get('https://jsonplaceholder.typicode.com/comments?postId=1');
+    console.log(comments);
     
     console.log(res)
     for (let i = 0; i < res.data.results.length; i++) {
@@ -26,7 +28,12 @@ const fetchUser = async () => {
                     <div id="numbersOfThumbsup"><i class="fa fa-thumbs-o-up" id="thumbsUp1" aria-hidden="true"></i></div>
                     <div><i class="fa fa-comment-o" aria-hidden="true"></i>Comments</div>
                     <div><i class="fa fa-share" aria-hidden="true"></i>Share</div>
-                  </div>
+                    </div>
+                    <div class="comments"> 
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    </div>
                 </div>
             </div>
         `;
@@ -34,15 +41,6 @@ const fetchUser = async () => {
         randDiv.innerHTML = template;
         peopleElem.appendChild(randDiv);    
     }
-    let icon = document.querySelector('#thumbsUp1')
-    // document.addEventListener('on click')
-    icon.onclick = function (e) {
-        if (e.target.classList.contains("fa-thumbs-up")) {
-          e.target.classList.toggle("text-danger");
-        }
-       
-      };
-
     
 
 
